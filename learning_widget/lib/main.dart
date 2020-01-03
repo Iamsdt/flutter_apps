@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
   final String title;
 
   @override
@@ -41,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Wrap(
-          alignment: WrapAlignment.start,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
@@ -62,7 +61,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-///home/shudipto/software/studio/android-studio
-///flutter config --android-studio-dir <home/shudipto/software/studio/android-studio>
