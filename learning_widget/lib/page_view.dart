@@ -32,9 +32,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: PageView(
           children: <Widget>[
+            Icon(Icons.error),
+            Icon(Icons.email),
+            Icon(Icons.access_alarm),
           ],
         ),
       ),

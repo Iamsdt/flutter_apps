@@ -28,15 +28,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-          ],
-        ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 200.0,
+            floating: false,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text("This is the title"),
+            ),
+          ),
+          SliverFillRemaining(
+              child:
+                  FadeInImage.assetNetwork(placeholder: "Loading",
+                      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvkzEJUeQs1_Pk0D8dncJ7EHpJfPKh6hAy8iEFbpME8imSiQBn"))
+        ],
       ),
     );
   }

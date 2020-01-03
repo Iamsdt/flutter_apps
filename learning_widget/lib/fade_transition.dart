@@ -25,6 +25,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  var _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    //_controller = AnimationController(duration: const Duration(seconds: 1), vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            FadeTransition(
+              opacity: _controller,
+              child: Text("Hello how are you"),
+            )
           ],
         ),
       ),
