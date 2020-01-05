@@ -62,7 +62,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-///home/shudipto/software/studio/android-studio
-///flutter config --android-studio-dir <home/shudipto/software/studio/android-studio>
