@@ -76,31 +76,39 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                   color: Color(0XFFE5EFF5),
                   borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(55.0),)),
-              padding: EdgeInsets.only(left:25.0, right: 25.0),
+                    topRight: Radius.circular(55.0),
+                  )),
+              padding: EdgeInsets.only(left: 25.0, right: 25.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: 32.0,),
-                  Text("REAMINING TASK", style: TextStyle(
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.bold
-                  ),),
-                  SizedBox(height:20.0),
+                  SizedBox(
+                    height: 32.0,
+                  ),
+                  Text(
+                    "REAMINING TASK",
+                    style:
+                        TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20.0),
                   getUnFinishedItem(false),
-                  SizedBox(height:20.0),
+                  SizedBox(height: 20.0),
                   getUnFinishedItem(false),
-                  SizedBox(height: 32.0,),
-                  Text("COMPLETED TASK", style: TextStyle(
-                      fontSize: 22.0,
-                      inherit: true,
-                      fontWeight: FontWeight.bold
-                  ),),
-                  SizedBox(height:20.0),
+                  SizedBox(
+                    height: 32.0,
+                  ),
+                  Text(
+                    "COMPLETED TASK",
+                    style: TextStyle(
+                        fontSize: 22.0,
+                        inherit: true,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20.0),
                   getUnFinishedItem(true),
-                  SizedBox(height:20.0),
+                  SizedBox(height: 20.0),
                   getUnFinishedItem(true),
-                  SizedBox(height:20.0),
+                  SizedBox(height: 20.0),
                 ],
               ),
             ),
@@ -115,8 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget getUnFinishedItem(bool isFinished){
-
+  Widget getUnFinishedItem(bool isFinished) {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
@@ -150,26 +157,27 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          isFinished ? Container():
-          Container(
-            height: double.infinity,
-            decoration: BoxDecoration(
-                color: Color(0xff6CCFF6),
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(25.0),
-                    bottomRight: Radius.circular(25.0))),
-            child: Padding(
-              padding: const EdgeInsets.all(14.0),
-              child: RotatedBox(
-                quarterTurns: 1,
-                child: Center(
-                    child: Text(
-                      "DONE",
-                      style: TextStyle(fontSize: 16.0),
-                    )),
-              ),
-            ),
-          ),
+          isFinished
+              ? Container()
+              : Container(
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Color(0xff6CCFF6),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(25.0),
+                          bottomRight: Radius.circular(25.0))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: RotatedBox(
+                      quarterTurns: 1,
+                      child: Center(
+                          child: Text(
+                        "DONE",
+                        style: TextStyle(fontSize: 16.0),
+                      )),
+                    ),
+                  ),
+                ),
         ],
       ),
     );
