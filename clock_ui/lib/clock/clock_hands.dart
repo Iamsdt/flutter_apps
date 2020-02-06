@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'hand_hour.dart';
 import 'hand_minute.dart';
