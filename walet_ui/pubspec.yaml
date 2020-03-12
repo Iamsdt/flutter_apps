@@ -1,4 +1,4 @@
-name: Chopper
+name: walet_ui
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -22,16 +22,11 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.3
-  chopper: ^3.0.2
-  provider: ^4.0.3
+  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  chopper_generator: ^3.0.4
-  build_runner: ^1.8.0
 
 
 # For information on the generic Dart part of this file, see the
